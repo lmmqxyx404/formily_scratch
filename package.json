@@ -1,0 +1,19 @@
+{
+  "name": "formily_scratch",
+  "private": true,
+  "devEngines": {
+    "node": "20.x"
+  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
