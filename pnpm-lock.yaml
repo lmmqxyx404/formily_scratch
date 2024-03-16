@@ -1,0 +1,19 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .: {}
+
+  packages/core:
+    dependencies:
+      '@bob/shared':
+        specifier: '1'
+        version: link:../shared
+
+  packages/reactive: {}
+
+  packages/shared: {}

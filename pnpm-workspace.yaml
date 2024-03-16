@@ -1,0 +1,7 @@
+# 配置 multi-package repositorie
+packages:
+ - 'packages/*'
+ # all packages in subdirs of components/
+ #- 'components/**'
+  # exclude packages that are inside test directories
+ #- '!**/test/**'
