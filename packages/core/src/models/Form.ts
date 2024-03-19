@@ -13,6 +13,7 @@ export class Form<ValueType extends object = any> {
 
   protected initialize(props: IFormProps<ValueType>) {
     this.id = uid();
+    /**将传递过来的 props 全部保存*/
     this.props = props;
   }
 }

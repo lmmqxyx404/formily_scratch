@@ -1,5 +1,1 @@
-let obj = {
-  name: "reactive",
-};
-
-export { obj };
+export * from "./observable";
