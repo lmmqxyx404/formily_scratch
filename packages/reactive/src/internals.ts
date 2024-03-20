@@ -1,4 +1,5 @@
-import { ProxyRaw } from "./environment";
+import { ProxyRaw, RawShallowProxy } from "./environment";
+import { isSupportObservable } from "./externals";
 import { getDataNode } from "./tree";
 
 export const createObservable = (
@@ -16,7 +17,15 @@ export const createObservable = (
     return value;
   }
 
-  // todo: 不支持 observable
+  // 不支持 observable
+  if (!isSupportObservable(value)) return value;
+  if (target) {
+    const parentRaw = ProxyRaw.get(target) || target;
+    const isShallowParent = RawShallowProxy.get(parentRaw);
+    if (isShallowParent) return value;
+  }
+
+  // todo:   buildDataTree(target, key, value)
 
   return value;
 };
